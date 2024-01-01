@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans";
+}
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to left, rgb(49, 0, 165), rgb(162, 0, 255));
+  background-size: 300%;
+
+  animation: background_animation 5s linear infinite alternate;
+}
+
+@keyframes background_animation {
+  0% {
+    background-position: 50% 100%;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+.container {
+  background-color: white;
+  width: 350px;
+
+  padding: 40px;
+
+  border-radius: 25px;
+}
+
+.input_box {
+  margin: 20px 0;
+  position: relative;
+}
+
+.input_box > input {
+  height: 50px;
+  width: 80%;
+  padding-left: 35px;
+
+  background-color: rgb(228, 228, 228);
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 1em;
+  color: rgb(73, 73, 73);
+}
+
+.input_box > .red_placeholder::placeholder{
+  color: red;
+}
+
+.input_box > input:focus {
+  outline: none;
+}
+
+.input_box > button {
+  height: 50px;
+  width: 25%;
+
+  position: absolute;
+  right: 10%;
+
+  color: white;
+
+  background-color: rgb(255, 153, 0);
+  border: none;
+
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input_box > button:hover {
+  color: rgb(255, 153, 0);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 153, 0);
+}
+
+.input_box > button:active {
+  color: white;
+  background-color: rgb(255, 153, 0);
+  box-shadow: 0 0 15px rgb(255, 153, 0);
+}
+
+/* 
+
+Body part from here
+
+*/
+.list_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  list-style-type: none;
+  user-select: none;
+}
+
+.list_box > li {
+  position: relative;
+}
+
+.list_box label {
+  height: 2em;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.list_box label:hover {
+  background-color: rgb(236, 236, 236);
+}
+.list_box > li input {
+  position: absolute;
+  opacity: 0;
+}
+
+.list_box input:checked ~ pre {
+  text-decoration: line-through;
+}
+
+.list_box input:checked ~ .checkmark {
+  background-color: rgb(255, 153, 0);
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+  margin: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+
+  color: white;
+  background-color: white;
+  border: 1px solid rgb(255, 153, 0);
+
+  transition: all 0.3s ease;
+}
+
+.cross {
+  height: 20px;
+  padding: 10px;
+
+  position: absolute;
+  right: 0;
+  top: 5px;
+  border-radius: 50px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cross:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.cross:hover + label {
+  background-color: rgb(226, 226, 226);
+}

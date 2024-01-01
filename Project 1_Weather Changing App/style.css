@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+.container {
+  height: 750px;
+  width: 500px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  border-radius: 50px;
+  background-image: linear-gradient(to top right,rgb(66, 197, 132),rgb(83, 42, 160));
+  background-size: 300%;
+
+  animation-name: background;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes background{
+  0%{
+    background-position: 0 100%;
+  }
+  
+  25%{
+    background-position: 100% 0%;
+  }
+  
+  50%{
+    background-position: 50% 50%;
+  }
+
+  75%{
+    background-position: 75% 25%;
+  }
+
+  100%{
+    background-position: 0% 0%;
+  }
+}
+
+.search_box {
+  margin-top: 30px;
+}
+
+button {
+  padding: 18px;
+
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+  cursor: pointer;
+}
+
+button > img {
+  height: 20px;
+}
+
+.search_box > input {
+  height: 60px;
+  width: 350px;
+  padding-left: 20px;
+  margin-right: 20px;
+
+  color: rgb(61, 61, 61);
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+
+  transition: box-shadow 0.2s ease;
+}
+
+.search_box > input::placeholder {
+  color: rgba(0, 0, 0, 0.308);
+}
+
+.search_box > input:focus-visible {
+  outline: 0px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.37);
+}
+
+.error_bar{
+  display:none;
+
+  position: absolute;
+  top: 99px;
+  left: 86px;
+}
+.tooltip{
+  height: 15px;
+  width: 0px;
+
+
+  position: relative;
+  left: 130px;
+
+
+  transform: rotate(180deg);
+
+
+  border-top:15px solid rgb(253 0 0 / 52%);
+  Border-right:15px solid transparent;
+  border-left:15px solid transparent;
+}
+.error{
+  height: 28px;
+  width: 279px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  font-size: 1.2em;
+  background-color: rgb(253 0 0 / 52%);
+  border-radius: 20px;
+}
+
+.main_view {
+  height: 60%;
+  width: 80%;
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background-color: rgba(255, 255, 255, 0.096);
+  border: outset 5px rgba(255, 255, 255, 0.075);
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+}
+
+.main_view > img {
+  height: 100px;
+
+  animation:rounding 30s linear infinite;
+}
+
+@keyframes rounding{
+  form{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.temperature {
+  padding-top: 50px;
+  font-size: 6em;
+}
+
+.country {
+  font-size: 2.5em;
+}
+
+.footer {
+  width: 90%;
+  height: 15%;
+  margin-top: 30px;
+
+  background-color: rgba(255, 255, 255, 0.096);
+
+  border: outset 5px rgba(255, 255, 255, 0.075);
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.123);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.humidity_container,
+.wind_speed_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 100;
+}
+
+.humidity_container > img,
+.wind_speed_container > img {
+  height: 60px;
+}
+
+.white {
+  filter: invert();
+}
+
+.footer_detail {
+  font-size: 2em;
+}
+
+.hider{
+  height: 0px;
+  width: 562px;
+
+  position:absolute;
+  bottom: 0px;
+
+  background-color: rgb(27, 27, 27);
+
+  z-index: 1;
+
+  animation:reveal 2s cubic-bezier(0.05, 1.03, 0.43, 0.96);
+}
+
+@keyframes reveal{
+  from{
+    height: 1000px;
+  }
+  to{
+    height: 0px;
+  }
+}
+
+
+@media (max-width:580px) {
+  .container {
+    width: 80vw;
+    padding: 15px;
+  }
+
+  button {
+    padding: 18px;
+  }
+  
+  button > img {
+    height: 15px;
+  }
+  
+  .search_box > input {
+    height: 60px;
+    width: 200px;
+    margin-right:10px;
+  }
+
+  .error_bar{
+  top: 94px;
+  left: 34px;
+  }
+
+  .tooltip{
+    height: 15px;
+    width: 0px;
+
+    position: relative;
+
+  }
+  .error{
+    height: 24px;
+    width: 221px;
+    font-size: 1em;
+  }
+}

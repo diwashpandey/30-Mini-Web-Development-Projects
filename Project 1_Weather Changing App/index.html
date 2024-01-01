@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="container">
+        <div class="error_bar">
+          <div class="tooltip"></div>
+          <div class="error">Please enter valid country name</div>
+        </div>
+        <div class="hider"></div>
+        <div class="search_box">
+          <input type="text" placeholder="Enter a country name" />
+          <button><img src="./icons/search.svg" alt="search icon" /></button>
+        </div>
+        <div class="main_view">
+
+          <img src="./icons/sun.svg" alt="sun"  class="white"/>
+
+          <div class="temperature">0&#176;f</div>
+
+          <div class="country">Country</div>
+        </div>
+        <div class="footer">
+            <div class="humidity_container">
+                <img src="./icons/humidity.svg" alt="humidity icon" class="white">
+                <div class="text">
+                    <p class="footer_detail humidity">0%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind_speed_container">
+                <img src="./icons/wind.svg" alt="humidity icon" class="white">
+                <div class="text">
+                    <p class="footer_detail wind_speed">0 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
