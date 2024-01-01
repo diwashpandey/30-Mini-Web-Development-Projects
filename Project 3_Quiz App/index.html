@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz App</h1>
+        <hr>
+        <h2>Question</h2>
+        <ul class="option_box">
+            <li>
+                <label class="option">
+                    <input type="radio" name="options" value="selected_1" onclick="getSelected()">
+                    <p class="option_0">Option 1</p>
+                </label>
+            </li>
+            <li>
+                <label class="option">
+                    <input type="radio" name="options" value="selected_2" onclick="getSelected()">
+                    <p class="option_1">Option 2</p>
+                </label>
+            </li>
+            <li>
+                <label class="option">
+                    <input type="radio" name="options" value="selected_3" onclick="getSelected()">
+                    <p class="option_2">Option 3</p>
+                </label>
+            </li>
+            <li>
+                <label class="option">
+                    <input type="radio" name="options" value="selected_4" onclick="getSelected()">
+                    <p class="option_3">Option 4</p>
+                </label>
+            </li>
+        </ul>
+        <button onclick="builter()">Next</button>
+        <button class="start" onclick="start()">Start</button>
+        <div class="results">
+            Cogratulations!<br>You have completed the game with score<br><span>1</span>out of 5
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to left, rgb(49, 0, 165), rgb(0, 183, 255));
+  background-size: 300%;
+
+  animation: background_animation 5s linear infinite alternate;
+}
+
+@keyframes background_animation {
+  0% {
+    background-position: 50% 100%;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+.container {
+  min-height: 400px;
+  min-width: 900px;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 25px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.507);
+}
+
+h1 {
+  color: rgb(22, 22, 182);
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+hr {
+    margin-bottom: 30px;
+}
+
+h2{
+    color: rgb(22, 22, 182);
+}
+
+.option_box{
+    list-style-type: none;
+}
+
+.option{
+    height:50px;
+    width:90%;
+    margin:20px;
+    padding-left:30px;
+
+    display:flex;
+    align-items: center;
+
+    background-color: rgb(240, 240, 240);
+    
+    border:1px solid black;
+    border-radius: 10px;
+    
+    
+    cursor:pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.option:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+
+input{
+    position:absolute;
+    opacity: 0;
+}
+
+
+button{
+    display:none;
+    width:120px;
+    background-color: rgb(0, 0, 179);
+    border:none;
+    color:white;
+    padding:20px;
+    cursor: pointer;
+    align-self: center;
+    border-radius:10px;
+}
+
+.start{
+  position:relative;
+  top:100px;
+  display:block;
+  width:220px;
+  height:100px;
+  font-size: 3em;
+  background-color: rgb(124, 207, 0);
+}
+
+h2,ul{
+  display:none;
+}
+
+.results{
+  text-align: center;
+  height: 500px;
+  width: 900px;
+
+  display:none;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+
+  position:absolute;
+
+  font-size: 2.5em;
+}
+
+.results>span{
+  display: block;
+  
+  position:relative;
+  top:20px;
+
+  font-weight: bolder;
+  font-size: 2em;
+  color:rgb(98, 0, 255);
+}

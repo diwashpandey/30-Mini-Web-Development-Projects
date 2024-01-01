@@ -1,0 +1,47 @@
+{
+    "question1" : {
+        "question":"First Question",
+        "options":{
+            "option 1":"Right answer",
+            "option 2":"Wrong answer",
+            "option 3":"Wrong answer",
+            "option 4":"Wrong answer"
+        }
+    },
+    "question2" : {
+        "question":"Second Question",
+        "options":{
+            "option 1":"Wrong answer",
+            "option 2":"Right answer",
+            "option 3":"Wrong answer",
+            "option 4":"Wrong answer"
+        }
+    },
+    "question3" : {
+        "question":"Third Question",
+        "options":{
+            "option 1":"Wrong answer",
+            "option 2":"Wrong answer",
+            "option 3":"Right answer",
+            "option 4":"Wrong answer"
+        }
+    },
+    "question4" : {
+        "question":"Fourth Question",
+        "options":{
+            "option 1":"Wrong answer",
+            "option 2":"Right answer",
+            "option 3":"Wrong answer",
+            "option 4":"Wrong answer"
+        }
+    },
+    "question5" : {
+        "question":"Fifth Question",
+        "options":{
+            "option 1":"Right answer",
+            "option 2":"Wrong answer",
+            "option 3":"Wrong answer",
+            "option 4":"Wrong answer"
+        }
+    }
+}
