@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  user-select: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1e1e1e;
+  flex-direction: column;
+}
+
+.date-place {
+  font-size: 4em;
+  gap: 40px;
+}
+
+.container {
+  height: 325px;
+  width: 1023px;
+  padding: 20px;
+  margin: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #404040;
+  border-radius: 71px;
+  font-size: 14em;
+}
+
+.hour-box,
+.sec-box,
+.min-box {
+  height: 100%;
+  width: 29%;
+  background-color: #282828;
+  border-radius: inherit;
+}
+
+.sec-box {
+  animation-name: animation;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0.99, 0.18, 1.51);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+  0% {
+    font-size: 0.8em;
+  }
+  50% {
+    font-size: 1em;
+  }
+}
+
+.container > p {
+  position: relative;
+  bottom: 30px;
+}
+
+.text {
+  font-size: 2em;
+}
+
+span {
+  color: rgb(0, 140, 255);
+  font-size: 1.3em;
+}
+
+/*  */
