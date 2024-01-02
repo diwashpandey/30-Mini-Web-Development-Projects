@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app">
+        <nav>
+            <img src="./Equipments/icons/back.svg" alt="" id="back" onclick="showError()">
+            <img src="./Equipments/icons/burger.svg" alt="" id="burger" onclick="showError()">
+        </nav>
+        <img src="./Equipments/Music Title Photo.jpg" alt="Music Title Photo" id="title-photo">
+        <h2>Title Of Music</h2>
+        <p>Author of Music</p>
+        <audio id="music" repeat>
+            <source src="./Equipments/Broccoli On My Plate.mp3" type="audio/mpeg">
+        </audio>
+        <input type="range" value="0" id="progressbar">
+        <div class="buttons-container">
+            <img src="./Equipments/icons/previous.svg" alt="" id="previous" onclick="showError()">
+            <img src="./Equipments/icons/play.svg" class="paused" alt="" id="play" onclick="playPause()">
+            <img src="./Equipments/icons/next.svg" alt="" id="next" onclick="showError()">
+        </div>
+        <!-- <div class="toast">Sorry, this button is not functionable</div> -->
+    </div>
+    
+    
+    
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

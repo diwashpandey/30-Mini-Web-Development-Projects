@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap");
+
+:root {
+  --theme-color: rgb(86, 0, 161);
+  --hover-color: rgb(73, 0, 137);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+}
+
+.app {
+  height: 90vh;
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(129, 91, 255);
+  border-radius: 25px;
+}
+
+/* nav section */
+
+nav {
+  height: 100px;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > img {
+  height: 50px;
+  width: 50px;
+  padding:10px;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--theme-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+  
+  transition: all 0.2s ease;
+}
+
+nav>img:active{
+  padding: 15px;
+}
+
+nav>img:hover{
+  background-color: var(--hover-color);
+}
+
+
+/* Main View */
+
+#title-photo {
+  height: 200px;
+  width: 200px;
+  padding:5px;
+  margin-bottom: 40px;
+
+  border-radius: 50%;
+  background-color: var(--theme-color);
+}
+
+.rotating{
+  animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating {
+  100%{
+    transform:rotate(360deg)
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#progressbar{
+    -webkit-appearance: none;
+
+    width:80%;
+    height:5px;
+
+    background-color: white;
+    border-radius: 50px;
+}
+
+#progressbar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+
+    width:25px;
+    height:25px;
+    
+    border:8px solid var(--theme-color);
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.buttons-container {
+  width: 100%;
+  margin-top: 50px;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.buttons-container>img{
+  height: 60px;
+  padding: 10px;
+  
+  background-color: var(--theme-color);
+  border-radius: 50%;
+
+  cursor:pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buttons-container>img:nth-child(2){
+    height: 80px;
+    padding: 15px;
+}
+
+.buttons-container>img:active{
+  padding: 15px;
+}
+
+.buttons-container>img:nth-child(2):active{
+    padding: 20px;
+}
+
+.buttons-container>img:hover{
+    background-color: var(--hover-color);
+}
+
+/* Toas Bar */
+
+.toast{
+  height:40px;
+  width:300px;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  position:fixed;
+
+  border-radius: 15px;
+  background-color: var(--theme-color);
+  opacity:0.7;
+  animation:entry 0.6s cubic-bezier(0.04, 1.12, 0.68, 0.9);
+}
+
+@keyframes entry {
+  0%{
+    transform:translateY(-100px)
+  }
+  100%{
+    transform:translateY(0px)
+  }
+}
+
+.toast::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  height:3px;
+  width:80%;
+  background-color: aliceblue;
+  z-index:1;
+  transform:scaleX(0);
+  animation:loadbar 2s linear;
+}
+
+@keyframes loadbar {
+  0%{
+    transform:scaleX(1);
+  }
+  100%{
+    transform:scaleX(0);
+  }
+}
