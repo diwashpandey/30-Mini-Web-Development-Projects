@@ -149,8 +149,8 @@ Body part from here
 }
 
 .checkmark {
-  height: 20px;
-  width: 20px;
+  min-height: 20px;
+  min-width: 20px;
   margin: 0 20px;
 
   display: flex;
@@ -184,3 +184,4 @@ Body part from here
 .cross:hover + label {
   background-color: rgb(226, 226, 226);
 }
+
