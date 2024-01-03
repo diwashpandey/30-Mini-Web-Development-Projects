@@ -1,5 +1,5 @@
 const display = document.getElementById("display")
-var values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "-", "/", ".", "Enter","Backspace","Escape", "Delete"]
+var values = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+", "-","*", "/", ".", "Enter","Backspace","Escape", "Delete"]
 
 function addOnDisplay(data){
     display.value = display.value+data;
