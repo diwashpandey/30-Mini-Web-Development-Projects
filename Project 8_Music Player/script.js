@@ -9,7 +9,7 @@ const titlePhoto = document.getElementById("title-photo")
 
 music.onloadedmetadata = ()=>{
     // progress.max = Math.floor(music.duration);
-    progress.max = 184;
+    progress.max = music.duration;
     progress.min = music.currentTime;
 
 }
