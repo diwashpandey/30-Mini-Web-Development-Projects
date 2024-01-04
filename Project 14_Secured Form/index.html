@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" id="form">
+        
+        <img src="./Equipments/form.svg" alt="" height="70px">
+        <label>
+            Full Name
+            <input type="text" name="name" id="name-input" onkeyup="checkName()">
+            <span id="name-error"></span>
+        </label>
+
+        <label>
+            Phone Number
+            <input type="number" name="name" id="number-input" onkeyup="checkNumber()">
+            <span id="number-error"></span>
+        </label>
+
+        <label>
+            Email Id
+            <input type="email" name="name" id="email-input" onkeyup="checkEmail()">
+            <span id="email-error"></span>
+        </label>
+
+        <label>
+            Your Messege
+            <textarea name="Messege" id="messege-input" rows="5" cols="4" onkeyup="checkMessege()"></textarea>
+            <span id="messege-error"></span>
+        </label>
+        <div id="submit-btn" onclick="checkAndSubmit()">Submit</div>
+
+
+    </div>
+        
+    </form>
+
+    <div class="popup">
+        <img src="./Equipments/ticksubmit.svg" alt="">
+        <h2>Thank You</h2>
+        <p>Your details has been successfully submitted</p>
+        <button id="close-btn" onclick="closePopup()">OK</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
