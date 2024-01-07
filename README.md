@@ -7,4 +7,17 @@
   <li>Weather Changing App</li>
   <li>To-Do App</li>
   <li>Quiz App</li>
+  <li>Age Calculator</li>
+  <li>Quote Generator for Twitter</li>
+  <li>Clock website</li>
+  <li>Toast Notification</li>
+  <li>Music Player</li>
+  <li>StopWatch</li>
+  <li>PopUp</li>
+  <li>Show Password Animeted</li>
+  <li>Theme Modes</li>
+  <li>Calculator</li>
+  <li>Secured Form</li>
+  <li>Photo Scroll</li>
+  <li>Number Guessing Game</li>
 </ol>
