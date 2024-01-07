@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <div class="game-box">
+        <p id="question">Please think a number between 1-100</p>
+        <input type="number" name="number" id="display" readonly disabled value="56">
+        <div class="buttons-container">
+            <button class="yes group1" onClick="game.yes()">Yes</button>
+            <button class="no group1" onClick="game.no()">No</button>
+            <button class="higher group2" onclick="game.isHigher()">Higher</button>
+            <button class="lower group2" onclick="game.isLower()">Lower</button>
+        </div>
+            <button class="main-btn" onclick="game.start()">Start</button>
+    </div>
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
