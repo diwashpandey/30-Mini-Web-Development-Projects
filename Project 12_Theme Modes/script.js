@@ -10,16 +10,14 @@ const hireBtn = document.querySelector(".content-box>button");
 function changeIcon(turn) {
     if (turn == "dark") {
         sunIcon.classList.remove("active-theme")
-        setTimeout(() => {
-            moonIcon.classList.add("active-theme")
-        }, 500)
+        moonIcon.classList.add("active-theme")
+        
 
     }
     else if (turn == "light") {
         moonIcon.classList.remove("active-theme")
-        setTimeout(() => {
-            sunIcon.classList.add("active-theme")
-        }, 500)
+        sunIcon.classList.add("active-theme")
+        
     }
     else {
         alert("Sorry, Some Error Occured")
